@@ -1,11 +1,11 @@
 Name:           innoextract
 Version:        1.7
-Release:        1
+Release:        2
 License:        zlib
 Summary:        A tool to unpack "exe" installers created by Inno Setup
 Url:            http://constexpr.org/innoextract/
 Group:          Archiving/Compression
-Source:         http://constexpr.org/innoextract/files/%{name}-%{version}/%{name}-%{version}.tar.gz
+Source0:        http://constexpr.org/innoextract/files/%{name}-%{version}/%{name}-%{version}.tar.gz
 BuildRequires:  cmake
 BuildRequires:  boost-devel
 BuildRequires:  pkgconfig(liblzma)
