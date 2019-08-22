@@ -6,7 +6,9 @@ Summary:        A tool to unpack "exe" installers created by Inno Setup
 Url:            http://constexpr.org/innoextract/
 Group:          Archiving/Compression
 Source0:        http://constexpr.org/innoextract/files/%{name}-%{version}/%{name}-%{version}.tar.gz
+Patch0:		innoextract-1.7-compile.patch
 BuildRequires:  cmake
+BuildRequires:	ninja
 BuildRequires:  boost-devel
 BuildRequires:  pkgconfig(liblzma)
 
@@ -31,16 +33,16 @@ non-windows systems without running the actual installer using wine.
 #$ man 1 innoextract
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
-%cmake
-%make_build
+%cmake -G Ninja
+%ninja_build
 
 %install
-%make_install -C build
+%ninja_install -C build
 
 %files
 %doc README.md CHANGELOG VERSION LICENSE
 %{_bindir}/%{name}
-%{_mandir}/man1/%{name}.1.xz
+%{_mandir}/man1/%{name}.1*

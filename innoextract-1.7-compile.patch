@@ -1,0 +1,12 @@
+diff -up innoextract-1.7/CMakeLists.txt.omv~ innoextract-1.7/CMakeLists.txt
+--- innoextract-1.7/CMakeLists.txt.omv~	2019-08-22 10:34:59.640467656 +0200
++++ innoextract-1.7/CMakeLists.txt	2019-08-22 10:35:08.297484644 +0200
+@@ -142,7 +142,7 @@ find_package(Boost REQUIRED COMPONENTS
+ 	system
+ 	program_options
+ )
+-check_link_library(Boost Boost_LIBRARIES)
++#check_link_library(Boost Boost_LIBRARIES)
+ list(APPEND LIBRARIES ${Boost_LIBRARIES})
+ link_directories(${Boost_LIBRARY_DIRS})
+ include_directories(SYSTEM ${Boost_INCLUDE_DIR})
