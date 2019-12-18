@@ -1,6 +1,6 @@
 Name:           innoextract
 Version:	1.8
-Release:	1
+Release:	2
 License:        zlib
 Summary:        A tool to unpack "exe" installers created by Inno Setup
 Url:            http://constexpr.org/innoextract/
