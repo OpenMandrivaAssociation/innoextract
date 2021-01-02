@@ -10,6 +10,9 @@ BuildRequires:  cmake
 BuildRequires:	ninja
 BuildRequires:  boost-devel
 BuildRequires:  pkgconfig(liblzma)
+BuildRequires:  pkgconfig(bzip2)
+BuildRequires:  pkgconfig(zlib)
+BuildRequires:  pkgconfig(libzstd)
 
 %description
 Inno Setup is a tool to create installers for Microsoft Windows
