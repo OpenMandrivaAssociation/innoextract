@@ -1,11 +1,12 @@
 Name:           innoextract
 Version:	1.9
-Release:	14
+Release:	15
 License:        zlib
 Summary:        A tool to unpack "exe" installers created by Inno Setup
 Url:            https://constexpr.org/innoextract/
 Group:          Archiving/Compression
 Source0:        https://constexpr.org/innoextract/files/%{name}-%{version}/%{name}-%{version}.tar.gz
+Patch0:		innoextract-1.9-boost-1.85.patch
 BuildRequires:  cmake
 BuildRequires:	ninja
 BuildRequires:  boost-devel
@@ -36,10 +37,10 @@ non-windows systems without running the actual installer using wine.
 
 %prep
 %autosetup -p1
+%cmake -G Ninja
 
 %build
-%cmake -G Ninja
-%ninja_build
+%ninja_build -C build
 
 %install
 %ninja_install -C build

@@ -1,0 +1,11 @@
+diff -up innoextract-1.9/src/stream/slice.cpp.omv~ innoextract-1.9/src/stream/slice.cpp
+--- innoextract-1.9/src/stream/slice.cpp.omv~	2024-03-28 14:43:36.891598330 +0100
++++ innoextract-1.9/src/stream/slice.cpp	2024-03-28 14:43:46.842836154 +0100
+@@ -27,6 +27,7 @@
+ #include <boost/cstdint.hpp>
+ #include <boost/algorithm/string/predicate.hpp>
+ #include <boost/filesystem/operations.hpp>
++#include <boost/filesystem/directory.hpp>
+ #include <boost/range/size.hpp>
+ 
+ #include "util/console.hpp"
