@@ -7,6 +7,7 @@ Url:            https://constexpr.org/innoextract/
 Group:          Archiving/Compression
 Source0:        https://constexpr.org/innoextract/files/%{name}-%{version}/%{name}-%{version}.tar.gz
 Patch0:		innoextract-1.9-boost-1.85.patch
+Patch1:   boost-1.89.patch
 BuildRequires:  cmake
 BuildRequires:	ninja
 BuildRequires:  boost-devel
